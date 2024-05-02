@@ -1,0 +1,24 @@
+{
+    "name": "sz4h/space-kuwait-star-woocommerce",
+    "description": "A plugin for Kuwait Star integration with Woocommerce",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Sz4h\\KuwaitStar\\": "src/"
+        },
+        "files": [
+            "helpers/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Ahmed Safaa",
+            "email": "ahmed@sz4h.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "cmb2/cmb2": "^2.10"
+    }
+}
