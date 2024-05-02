@@ -1,0 +1,6 @@
+2024-05-02 07:44:45
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 88
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+

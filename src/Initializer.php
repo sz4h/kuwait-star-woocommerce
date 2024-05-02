@@ -30,7 +30,7 @@ class Initializer {
 
 
 	function text_domain(): void {
-		load_plugin_textdomain( SPWKS_TD, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( SPWKS_TD, false, dirname( dirname( plugin_basename( __FILE__ ) )) . '/languages' );
 	}
 
 	function wp_enqueue_scripts(): void {
@@ -38,7 +38,7 @@ class Initializer {
 			return;
 		}
 		if ( is_view_order_page() || is_order_received_page() ) {
-			wp_enqueue_style( 'woocommerce-kuwait-star', SPWKS_URL . '/assets/css/woocommerce-kuwait-star.css', [], date( 'YmdHis' ) );
+			wp_enqueue_style( 'woocommerce-kuwait-star', SPWKS_URL . '/assets/css/woocommerce-kuwait-star.css', [], date( 'YmdH' ) );
 			wp_enqueue_style( 'line-awesome', 'https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css' );
 		}
 	}
