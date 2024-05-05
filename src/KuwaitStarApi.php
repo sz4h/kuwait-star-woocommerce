@@ -85,7 +85,7 @@ class KuwaitStarApi {
 				$data['query'] = $params;
 			}
 			$response = $this->client->request( $method, $url, $data );
-			$this->logger->log( error: 'SUCCESS: ' . $url, data: $params, file: __FILE__, method: __METHOD__, line: __LINE__ );
+//			$this->logger->log( error: 'SUCCESS: ' . $url, data: $params, file: __FILE__, method: __METHOD__, line: __LINE__ );
 
 			$response = $response->getBody()->__toString();
 			if ( ! $response ) {

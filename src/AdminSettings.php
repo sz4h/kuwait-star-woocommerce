@@ -14,6 +14,10 @@ class AdminSettings {
 		if ( $id !== 'sz4h_kuwait_star_options' ) {
 			return;
 		}
+		$options = get_option( 'kuwait_star_options' );
+		if ( ! @$options['email'] || ! @$options['password'] || ! @$options['domain'] ) {
+			return;
+		}
 		$credit = get_transient( 'kuwait_star_credit' );
 		if (!$credit) {
 			$credit = kuwait_star_api()->credit();
