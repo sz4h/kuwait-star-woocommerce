@@ -8,6 +8,8 @@ class AdminSettings {
 	public function __construct() {
 		add_action( 'cmb2_admin_init', [ $this, 'cmb2_admin_init' ] );
 		add_action( 'cmb2_before_form', [ $this, 'cmb2_before_form' ], 0, 4 );
+		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+
 	}
 
 	public function cmb2_before_form( $id, $object_id, $object_type, $class ): void {
@@ -19,7 +21,7 @@ class AdminSettings {
 			return;
 		}
 		$credit = get_transient( 'kuwait_star_credit' );
-		if (!$credit) {
+		if ( ! $credit ) {
 			$credit = kuwait_star_api()->credit();
 			set_transient( 'kuwait_star_credit', $credit, 60 * 60 );
 		}
@@ -42,7 +44,7 @@ class AdminSettings {
 
 			'option_key'  => 'kuwait_star_options',
 			// The option key and admin menu page slug.
-			'parent_slug' => 'options-general.php',
+			'parent_slug' => 'kuwait_star',
 			// Make options page a submenu item of the theme's menu.
 			'capability'  => 'manage_options',
 			// Cap required to view options-page.
@@ -84,5 +86,49 @@ class AdminSettings {
 			'default' => '10',
 		) );
 
+	}
+
+	public function admin_menu(): void {
+		add_menu_page( __( 'Kuwait Star', SPWKS_TD ), __( 'Kuwait Star', SPWKS_TD ), 'manage_options', 'kuwait_star_options' );
+		add_submenu_page(
+			'kuwait_star_options',
+			__( 'Logs', SPWKS_TD ), // Page title
+			__( 'Logs', SPWKS_TD ), // Menu title
+			'manage_options', // Capability
+			'kuwait_star_logs', // Menu slug
+			[ $this, 'logs_page' ], // Function to display the page content
+			'dashicons-admin-generic', // Icon URL
+			6 // Position
+		);
+	}
+
+	public function logs_page(): void {
+		global $logs;
+		$file = file_get_contents( SPWKS_PATH . 'logs/api-log.log' );
+		$logs = explode( "==========================", $file );
+		$logs = array_map( [ $this, 'style_logs' ], $logs );
+		include_once SPWKS_PATH . 'templates/admin-logs.php';
+	}
+
+	public function style_logs( string $item ): array {
+		$item = str_replace( 'FILE:', '<span class="label file">File</span>', $item );
+		$item = str_replace( 'METHOD:', '<span class="label method">Method</span>', $item );
+		$item = str_replace( 'LINE:', '<span class="label line">Line</span>', $item );
+		$item = str_replace( 'ERROR:', '<span class="label error">Error</span>', $item );
+		$item = str_replace( 'Data:', '<span class="label data">Data</span>', $item );
+		$item = preg_replace( '/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})/', '<span class="label date">$1</span>', $item );
+		$data = null;
+		if ( preg_match( '/a:\d+:{(?:[^{}]|(?R))*}/', $item, $matches ) ) {
+			$data = $matches[0];
+		}
+		if ( $data ) {
+			$item = str_replace( $data, '', $item );
+		}
+
+//		$data .= unserialize( html_entity_decode( $data) );
+
+//		dump(  $data);
+
+		return compact( 'item', 'data' );
 	}
 }

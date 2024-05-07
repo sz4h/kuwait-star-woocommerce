@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Woocommerce Kuwait Star Integration\n"
-"POT-Creation-Date: 2024-05-02 10:37+0300\n"
-"PO-Revision-Date: 2024-05-02 10:37+0300\n"
+"POT-Creation-Date: 2024-05-07 15:33+0300\n"
+"PO-Revision-Date: 2024-05-07 15:33+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -26,25 +26,29 @@ msgstr ""
 msgid "Kuwait Star credit low (Current credit: %s)"
 msgstr "كويت ستار الائتمان منخفض (الائتمان الحالي: %s)"
 
-#: src/AdminSettings.php:31
+#: src/AdminSettings.php:37 src/AdminSettings.php:92
 msgid "Kuwait Star"
 msgstr "كويت ستار"
 
-#: src/AdminSettings.php:57
+#: src/AdminSettings.php:63
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: src/AdminSettings.php:64
+#: src/AdminSettings.php:70
 msgid "Password"
 msgstr "كلمة المرور"
 
-#: src/AdminSettings.php:71
+#: src/AdminSettings.php:77
 msgid "Domain"
 msgstr "نطاق"
 
-#: src/AdminSettings.php:77
+#: src/AdminSettings.php:83
 msgid "Alert me when credit reach"
 msgstr "تنبيهي عند وصول الرصيد"
+
+#: src/AdminSettings.php:95 src/AdminSettings.php:96
+msgid "Logs"
+msgstr "السجلات"
 
 #: src/Api.php:39
 msgid "Sorry, you cannot list resources."

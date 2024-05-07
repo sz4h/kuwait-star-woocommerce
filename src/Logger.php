@@ -27,6 +27,7 @@ class Logger {
 			$message .= 'Data: ' . "\n";
 			$message .= serialize( $data );
 		}
+		$message .= "\n==========================";
 		$message .= PHP_EOL;
 
 		return file_put_contents( $this->file, $message, FILE_APPEND );
