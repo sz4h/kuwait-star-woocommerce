@@ -70,6 +70,9 @@ class AdminSettings {
 			'name'    => __( 'Password', SPWKS_TD ),
 			'id'      => 'password',
 			'type'    => 'text',
+			'attributes' => array(
+				'type' => 'password',
+			),
 			'default' => 'Password1',
 		) );
 

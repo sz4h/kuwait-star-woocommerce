@@ -20,7 +20,7 @@ class Order {
 	public function __construct() {
 		$this->logger = new Logger();
 		add_action( 'woocommerce_add_to_cart', [ $this, 'add_to_cart' ], 10, 6 );
-		add_action( 'woocommerce_pre_payment_complete', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
+//		add_action( 'woocommerce_pre_payment_complete', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
 		add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
 	}
 

@@ -1,12 +1,16 @@
 .kuwait-star-table {
   text-align: center;
-  margin-top: 1rem;
   border-collapse: collapse;
   width: 100%;
+  min-width: 100%;
   display: block;
   border: 1px solid #333;
   border-radius: 1rem;
   padding: 0.5rem;
+  margin: 1rem auto;
+}
+.kuwait-star-table tbody {
+  width: 100%;
 }
 .kuwait-star-table th, .kuwait-star-table td, .kuwait-star-table input {
   text-align: center !important;
@@ -28,6 +32,9 @@
 }
 .kuwait-star-table i {
   font-size: 1.5rem;
+}
+.kuwait-star-table.in-mail th:first-child, .kuwait-star-table.in-mail td:first-child, .kuwait-star-table.in-mail th:last-child, .kuwait-star-table.in-mail td:last-child {
+  display: none !important;
 }
 
 .woocommerce-table__product-name.product-name {

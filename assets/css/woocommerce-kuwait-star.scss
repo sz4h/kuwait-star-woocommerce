@@ -1,13 +1,18 @@
 
 .kuwait-star-table {
   text-align: center;
-  margin-top: 1rem;
   border-collapse: collapse;
   width: 100%;
+  min-width: 100%;
   display: block;
   border: 1px solid #333;
   border-radius: 1rem;
   padding: 0.5rem;
+  margin: 1rem auto;
+
+  tbody {
+    width: 100%;
+  }
 
   th, td, input {
     text-align: center !important;
@@ -33,6 +38,12 @@
 
   i {
     font-size: 1.5rem;
+  }
+
+  &.in-mail {
+    th:first-child, td:first-child, th:last-child, td:last-child {
+      display: none !important;
+    }
   }
 }
 
