@@ -85,12 +85,12 @@ class KuwaitStarApi {
 				$data['query'] = $params;
 			}
 			$response = $this->client->request( $method, $url, $data );
-//			$this->logger->log( error: 'SUCCESS: ' . $url, data: $params, file: __FILE__, method: __METHOD__, line: __LINE__ );
 
 			$response = $response->getBody()->__toString();
 			if ( ! $response ) {
 				throw new ApiException( 'Error in sending request' );
 			}
+			$this->logger->log( error: 'SUCCESS: ' . $url, data: $params, file: __FILE__, method: __METHOD__, line: __LINE__ );
 
 			return json_decode( $response );
 		} catch ( GuzzleException|ApiException $e ) {

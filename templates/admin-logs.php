@@ -39,6 +39,12 @@
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
+    .success {
+        color: #0B613C;
+    }
+    .error {
+        color: #9e1313;
+    }
 
     .data-json {
         width: 100%;

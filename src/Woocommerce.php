@@ -13,6 +13,9 @@ class Woocommerce {
 //		add_action( 'woocommerce_order_item_meta_end', [ $this, 'woocommerce_order_item_meta_end' ], 20, 4 );
 		add_action( 'woocommerce_after_order_details', [ $this, 'woocommerce_after_order_details' ], 20 );
 		add_action( 'woocommerce_after_template_part', [ $this, 'woocommerce_after_template_part' ], 10, 4 );
+		add_action( 'woocommerce_after_order_itemmeta', [ $this, 'woocommerce_after_order_itemmeta' ], 10, 3 );
+		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
+
 	}
 
 	/*
@@ -54,6 +57,23 @@ class Woocommerce {
 			include SPWKS_PATH . 'templates/kuwait-star-serial.php';
 		} else {
 			include SPWKS_PATH . 'templates/kuwait-star-serial-email.php';
+		}
+	}
+
+	public function woocommerce_after_order_itemmeta( $item_id, $item, $product ) {
+		if ( $product != null ) {
+			$serials = $item?->get_meta( 'serials' ) ?: null;
+			if ( ! $serials || count( $serials ) == 0 ) {
+				return;
+			}
+			$wrapper_class = 'in-web';
+			include SPWKS_PATH . 'templates/kuwait-star-serial-email.php';
+		}
+	}
+
+	public function admin_enqueue_scripts() {
+		if ( isset( $_REQUEST['post'] ) ) {
+			wp_enqueue_style( 'woocommerce-kuwait-star', SPWKS_URL . '/assets/css/woocommerce-kuwait-star.css', [], date( 'YmdH' ) );
 		}
 	}
 

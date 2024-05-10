@@ -119,6 +119,7 @@ class AdminSettings {
 		$item = str_replace( 'LINE:', '<span class="label line">Line</span>', $item );
 		$item = str_replace( 'ERROR:', '<span class="label error">Error</span>', $item );
 		$item = str_replace( 'Data:', '<span class="label data">Data</span>', $item );
+		$item = str_replace( 'SUCCESS:', '<span class="label success">Success</span>', $item );
 		$item = preg_replace( '/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})/', '<span class="label date">$1</span>', $item );
 		$data = null;
 		if ( preg_match( '/a:\d+:{(?:[^{}]|(?R))*}/', $item, $matches ) ) {
