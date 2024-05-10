@@ -1,12 +1,17 @@
 <?php global $logs; ?>
-<ul class="log-wrapper">
-	<?php foreach ( $logs as $log ) : ?>
-        <li class="log-item">
-			<?php echo nl2br( $log['item'] ); ?>
-            <textarea class="data-json"><?php echo json_encode( unserialize( str_replace( '\"', '"', $log['data'])), JSON_PRETTY_PRINT ); ?></textarea>
-        </li>
-	<?php endforeach; ?>
-</ul>
+<div class="wrap">
+    <a href="<?php echo admin_url( 'admin.php?page=kuwait_star_logs&clear=1' ); ?>"
+       class='page-title-action'><?php _e( 'Clear logs', SPWKS_TD ); ?></a>
+    <ul class='log-wrapper'>
+		<?php foreach ( $logs as $log ) : ?>
+            <li class="log-item">
+				<?php echo nl2br( $log['item'] ); ?>
+                <textarea
+                        class="data-json"><?php echo json_encode( unserialize( str_replace( '\"', '"', $log['data'] ) ), JSON_PRETTY_PRINT ); ?></textarea>
+            </li>
+		<?php endforeach; ?>
+    </ul>
+</div>
 <style>
     .log-wrapper {
         margin: 1rem;

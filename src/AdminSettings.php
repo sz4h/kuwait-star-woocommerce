@@ -67,13 +67,13 @@ class AdminSettings {
 		) );
 
 		$cmb_options->add_field( array(
-			'name'    => __( 'Password', SPWKS_TD ),
-			'id'      => 'password',
-			'type'    => 'text',
+			'name'       => __( 'Password', SPWKS_TD ),
+			'id'         => 'password',
+			'type'       => 'text',
 			'attributes' => array(
 				'type' => 'password',
 			),
-			'default' => 'Password1',
+			'default'    => 'Password1',
 		) );
 
 		$cmb_options->add_field( array(
@@ -107,6 +107,9 @@ class AdminSettings {
 
 	public function logs_page(): void {
 		global $logs;
+		if ( isset( $_REQUEST['clear'] ) ) {
+			file_put_contents( SPWKS_PATH . 'logs/api-log.log', '' );
+		}
 		$file = file_get_contents( SPWKS_PATH . 'logs/api-log.log' );
 		$logs = explode( "==========================", $file );
 		$logs = array_map( [ $this, 'style_logs' ], $logs );
