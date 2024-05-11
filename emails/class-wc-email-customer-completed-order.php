@@ -29,7 +29,7 @@ if ( ! class_exists( 'WC_Email_Admin_Customer_Completed_Order', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_completed_order';
 			$this->customer_email = false;
-			$this->title          = __( 'Admin Completed order', 'woocommerce' );
+			$this->title          = __( 'Admin Completed order', SPWKS_TD );
 			$this->description    = __( 'Order complete emails are sent to customers when their orders are marked completed and usually indicate that their orders have been shipped.', 'woocommerce' );
 			$this->template_html  = 'emails/customer-completed-order.php';
 			$this->template_plain = 'emails/plain/customer-completed-order.php';
@@ -107,7 +107,7 @@ if ( ! class_exists( 'WC_Email_Admin_Customer_Completed_Order', false ) ) :
 					'order'              => $this->object,
 					'email_heading'      => $this->get_heading(),
 					'additional_content' => $this->get_additional_content(),
-					'sent_to_admin'      => false,
+					'sent_to_admin'      => true,
 					'plain_text'         => false,
 					'email'              => $this,
 				)
@@ -126,7 +126,7 @@ if ( ! class_exists( 'WC_Email_Admin_Customer_Completed_Order', false ) ) :
 					'order'              => $this->object,
 					'email_heading'      => $this->get_heading(),
 					'additional_content' => $this->get_additional_content(),
-					'sent_to_admin'      => false,
+					'sent_to_admin'      => true,
 					'plain_text'         => true,
 					'email'              => $this,
 				)
