@@ -112,6 +112,9 @@ class AdminSettings {
 		}
 		$file = file_get_contents( SPWKS_PATH . 'logs/api-log.log' );
 		$logs = explode( "==========================", $file );
+		if ( $logs[0] === '' ) {
+			$logs = [];
+		}
 		$logs = array_map( [ $this, 'style_logs' ], $logs );
 		include_once SPWKS_PATH . 'templates/admin-logs.php';
 	}
