@@ -59,7 +59,6 @@ if ( ! class_exists( 'WC_Email_Admin_Customer_Completed_Order', false ) ) :
 			if ( $order_id && ! is_a( $order, 'WC_Order' ) ) {
 				$order = wc_get_order( $order_id );
 			}
-			dd($order);
 
 			if ( is_a( $order, 'WC_Order' ) ) {
 				$this->object                         = $order;
