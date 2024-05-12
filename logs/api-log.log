@@ -78,3 +78,136 @@ LINE: 98
 ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
 
 ==========================
+2024-05-12 19:45:21
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:21
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 102
+ERROR: Error in retrieving token
+
+==========================
+2024-05-12 19:45:23
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:24
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:24
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 102
+ERROR: Error in retrieving token
+
+==========================
+2024-05-12 19:45:28
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:28
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 102
+ERROR: Error in retrieving token
+
+==========================
+2024-05-12 19:45:30
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-05-12 19:45:34
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-05-12 19:45:54
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:54
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 102
+ERROR: Error in retrieving token
+
+==========================
+2024-05-12 19:45:55
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-05-12 19:45:56
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:57
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::login
+LINE: 66
+ERROR: Client error: `POST https://4codez.com/rest/V1/integration/customer/token` resulted in a `401 Unauthorized` response:
+{"message":"The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later." (truncated...)
+
+
+==========================
+2024-05-12 19:45:57
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 102
+ERROR: Error in retrieving token
+
+==========================
+2024-05-12 19:46:01
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-05-12 19:46:06
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
