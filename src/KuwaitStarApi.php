@@ -37,12 +37,15 @@ class KuwaitStarApi {
 
 	}
 
+	/**
+	 * @throws ApiException
+	 */
 	public function login(
 		string $url = 'rest/V1/integration/customer/token', array $headers = [
 		'Accept'       => 'application/json',
 		'Content-Type' => 'application/json'
 	], string $method = 'POST'
-	): void {
+	): bool {
 
 		try {
 			$response = $this->client->request( $method, $url, [
@@ -58,8 +61,10 @@ class KuwaitStarApi {
 			}
 			$token = trim( $token, '"' );
 			$this->set_token( $token );
+			return true;
 		} catch ( GuzzleException|ApiException $e ) {
 			$this->logger->log( error: $e->getMessage(), file: __FILE__, method: __METHOD__, line: __LINE__ );
+			throw new ApiException( 'Error in retrieving token' );
 		}
 	}
 
@@ -72,8 +77,8 @@ class KuwaitStarApi {
 		'Content-Type' => 'application/json'
 	], string $method = 'GET'
 	): mixed {
-		$this->login();
 		try {
+			$this->login();
 			$headers['Authorization'] = 'Bearer ' . $this->get_token();
 			$data                     = [
 				'headers' => $headers

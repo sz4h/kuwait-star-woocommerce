@@ -2,6 +2,8 @@
 
 namespace Sz4h\KuwaitStar;
 
+use CMB2;
+
 class AdminSettings {
 
 
@@ -9,6 +11,7 @@ class AdminSettings {
 		add_action( 'cmb2_admin_init', [ $this, 'cmb2_admin_init' ] );
 		add_action( 'cmb2_before_form', [ $this, 'cmb2_before_form' ], 0, 4 );
 		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		add_action( 'cmb2_save_options-page_fields_sz4h_kuwait_star_options', [ $this, 'onSaveSetting' ], 10, 2 );
 
 	}
 
@@ -135,8 +138,15 @@ class AdminSettings {
 		}
 
 
-//		dump(  $data);
-
 		return compact( 'item', 'data' );
 	}
+
+	public function onSaveSetting( string $object_id, array $updated ): void {
+		if ( 'kuwait_star_options' === $object_id && count( $updated ) > 0 ) {
+			delete_transient( 'kuwait_star_is_active');
+			delete_transient( 'kuwait_star_daily_credit');
+		}
+	}
+
+
 }

@@ -4,7 +4,7 @@
  * Description:
  * Plugin URI: https://sz4h.com/
  * Author: Ahmed Safaa
- * Version: 1.0.12
+ * Version: 1.0.13
  * Author URI: https://sz4h.com/
  *
  * Text Domain: space-kuwait-star-woocommerce
@@ -12,7 +12,6 @@
  */
 use Sz4h\KuwaitStar\Initializer;
 
-/** @noinspection SpellCheckingInspection */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
