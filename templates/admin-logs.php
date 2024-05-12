@@ -6,8 +6,10 @@
 		<?php foreach ( $logs as $log ) : ?>
             <li class="log-item">
 				<?php echo nl2br( $log['item'] ); ?>
-                <textarea
-                        class="data-json"><?php echo json_encode( unserialize( str_replace( '\"', '"', $log['data'] ) ), JSON_PRETTY_PRINT ); ?></textarea>
+                <label>
+                    <textarea
+                            class="data-json"><?php echo json_encode( unserialize( str_replace( '\"', '"', $log['data'] ) ), JSON_PRETTY_PRINT ); ?></textarea>
+                </label>
             </li>
 		<?php endforeach; ?>
     </ul>
@@ -16,15 +18,17 @@
     .log-wrapper {
         margin: 1rem;
     }
+
     .log-item {
         background: #fff;
-        -webkit-box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
-        box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
         border-radius: 0.5rem;
         padding: 0.5rem;
     }
+
     .log-item:nth-child(even) {
         background: #f9f9f9;
     }
@@ -44,9 +48,11 @@
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
+
     .success {
         color: #0B613C;
     }
+
     .error {
         color: #9e1313;
     }
