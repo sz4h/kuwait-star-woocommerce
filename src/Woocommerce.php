@@ -2,7 +2,6 @@
 
 namespace Sz4h\KuwaitStar;
 
-use WC_Order_Item_Product;
 
 class Woocommerce {
 
@@ -60,7 +59,7 @@ class Woocommerce {
 		}
 	}
 
-	public function woocommerce_after_order_itemmeta( $item_id, $item, $product ) {
+	public function woocommerce_after_order_itemmeta( $item_id, $item, $product ): void {
 		if ( $product != null ) {
 			$serials = $item?->get_meta( 'serials' ) ?: null;
 			if ( ! $serials || count( $serials ) == 0 ) {
@@ -71,7 +70,7 @@ class Woocommerce {
 		}
 	}
 
-	public function admin_enqueue_scripts() {
+	public function admin_enqueue_scripts(): void {
 		if ( isset( $_REQUEST['post'] ) ) {
 			wp_enqueue_style( 'woocommerce-kuwait-star', SPWKS_URL . '/assets/css/woocommerce-kuwait-star.css', [], date( 'YmdH' ) );
 		}

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Woocommerce Kuwait Star Integration\n"
-"POT-Creation-Date: 2024-05-07 15:33+0300\n"
+"POT-Creation-Date: 2024-05-12 16:28+0300\n"
 "PO-Revision-Date: 2024-05-02 10:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,12 +22,47 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: src/AdminNotice.php:32
+#: mail/class-wc-email-admin-customer-completed-order.php:32
+msgid "Admin Completed order"
+msgstr ""
+
+#: mail/class-wc-email-admin-customer-completed-order.php:33
+msgid ""
+"Order complete emails are sent to admin when customers orders are marked "
+"completed and usually indicate that their orders have been shipped."
+msgstr ""
+
+#: mail/class-wc-email-admin-customer-completed-order.php:129
+msgid "{site_title} order is now complete"
+msgstr ""
+
+#: mail/class-wc-email-admin-customer-completed-order.php:139
+msgid "Thanks for shopping with us"
+msgstr ""
+
+#: mail/class-wc-email-admin-customer-completed-order.php:149
+msgid "Thanks for shopping with us."
+msgstr ""
+
+#. translators: %s: Customer first name
+#: mail/emails/admin-customer-completed-order.php:28
+#: mail/emails/plain/admin-customer-completed-order.php:25
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#. translators: %s: Site title
+#: mail/emails/admin-customer-completed-order.php:29
+#: mail/emails/plain/admin-customer-completed-order.php:27
+msgid "We have finished processing your order."
+msgstr ""
+
+#: src/AdminNotice.php:33
 #, php-format
 msgid "Kuwait Star credit low (Current credit: %s)"
 msgstr ""
 
-#: src/AdminSettings.php:37 src/AdminSettings.php:92
+#: src/AdminSettings.php:37 src/AdminSettings.php:95
 msgid "Kuwait Star"
 msgstr ""
 
@@ -39,15 +74,15 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: src/AdminSettings.php:77
+#: src/AdminSettings.php:80
 msgid "Domain"
 msgstr ""
 
-#: src/AdminSettings.php:83
+#: src/AdminSettings.php:86
 msgid "Alert me when credit reach"
 msgstr ""
 
-#: src/AdminSettings.php:95 src/AdminSettings.php:96
+#: src/AdminSettings.php:98 src/AdminSettings.php:99
 msgid "Logs"
 msgstr ""
 
@@ -55,12 +90,12 @@ msgstr ""
 msgid "Sorry, you cannot list resources."
 msgstr ""
 
-#: src/Order.php:75
+#: src/Order.php:80
 #, php-format
 msgid "Code for %s is: %s and it's pin is %s"
 msgstr ""
 
-#: src/Order.php:119
+#: src/Order.php:128
 msgid "Error in ordering"
 msgstr ""
 
@@ -72,20 +107,26 @@ msgstr ""
 msgid "Credit Available"
 msgstr ""
 
-#: templates/kuwait-star-serial-js.php:22 templates/kuwait-star-serial.php:3
-msgid "Share"
+#: templates/admin-logs.php:4
+msgid "Clear logs"
 msgstr ""
 
+#: templates/kuwait-star-serial-email.php:3
 #: templates/kuwait-star-serial.php:4
 msgid "Code"
 msgstr ""
 
-#: templates/kuwait-star-serial.php:5
-msgid "Copy"
-msgstr ""
-
+#: templates/kuwait-star-serial-email.php:15
 #: templates/kuwait-star-serial.php:23
 msgid "PIN"
+msgstr ""
+
+#: templates/kuwait-star-serial-js.php:22 templates/kuwait-star-serial.php:3
+msgid "Share"
+msgstr ""
+
+#: templates/kuwait-star-serial.php:5
+msgid "Copy"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

@@ -1,8 +1,8 @@
 <?php
 /**
- * Customer completed order email (plain text)
+ * Admin customer completed order email (plain text)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/customer-completed-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/admin-customer-completed-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to

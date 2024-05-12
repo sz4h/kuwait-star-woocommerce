@@ -6,7 +6,7 @@
         <tr>
             <td>
                 <label for="ks_code_<?php echo $item->get_id() . $k; ?>">
-                    <input type="text" id="ks_code_<?php echo $item->get_id() . $k; ?>"
+                    <input type="text" id="ks_code_<?php echo $item->get_id() . $k; ?>" readonly="readonly"
                            value="<?php echo $serial->SN_VALUE; ?>">
                 </label>
             </td>

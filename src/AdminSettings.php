@@ -12,7 +12,7 @@ class AdminSettings {
 
 	}
 
-	public function cmb2_before_form( $id, $object_id, $object_type, $class ): void {
+	public function cmb2_before_form( $id ): void {
 		if ( $id !== 'sz4h_kuwait_star_options' ) {
 			return;
 		}
@@ -100,8 +100,7 @@ class AdminSettings {
 			'manage_options', // Capability
 			'kuwait_star_logs', // Menu slug
 			[ $this, 'logs_page' ], // Function to display the page content
-			'dashicons-admin-generic', // Icon URL
-			6 // Position
+			6 // Icon URL
 		);
 	}
 
@@ -135,7 +134,6 @@ class AdminSettings {
 			$item = str_replace( $data, '', $item );
 		}
 
-//		$data .= unserialize( html_entity_decode( $data) );
 
 //		dump(  $data);
 

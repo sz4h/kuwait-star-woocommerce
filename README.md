@@ -11,6 +11,7 @@
 - Email the serials on Order Success Email
 - Serials on Thank you page
 - Show serials on API ( for mobile app )
+- Email admin with code on order completed
 
 
 #### Installation

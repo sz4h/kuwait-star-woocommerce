@@ -20,10 +20,10 @@ class Order {
 
 	public function __construct() {
 		$this->logger = new Logger();
-		add_filter('woocommerce_email_classes',[$this,'woocommerce_email_classes'],10,1);
+		add_filter('woocommerce_email_classes',[$this,'woocommerce_email_classes'] );
 		add_action( 'woocommerce_add_to_cart', [ $this, 'add_to_cart' ], 10, 6 );
 //		add_action( 'woocommerce_pre_payment_complete', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
-		add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
+		add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_order_status_completed' ], 10, 2 );
 	}
 
 	/**
@@ -44,8 +44,9 @@ class Order {
 		$this->getProductsAvailability( [ $refId ], $product );
 	}
 
-	public function woocommerce_payment_complete( $order_id, $transaction_id = null ): void {
+	public function woocommerce_order_status_completed( $order_id, $transaction_id = null ): void {
 		$order = wc_get_order( $order_id );
+
 		if ( $order->get_meta( 'kuwait_star_completed' ) ) {
 			return;
 		}
@@ -80,7 +81,9 @@ class Order {
 		$this->completeOrderKuwaitStarProcess( $order );
 
 		$email = WC()->mailer()->emails['WC_Email_Admin_Customer_Completed_Order'];
+		/** @noinspection PhpPossiblePolymorphicInvocationInspection */
 		$email->trigger($order_id, $order);
+
 	}
 
 
@@ -208,7 +211,7 @@ class Order {
 	}
 
 	public function woocommerce_email_classes( array $email_classes ): array {
-		require_once SPWKS_PATH . 'emails/class-wc-email-customer-completed-order.php';
+		require_once SPWKS_PATH . 'mail/class-wc-email-admin-customer-completed-order.php';
 		$email_classes['WC_Email_Admin_Customer_Completed_Order'] = new WC_Email_Admin_Customer_Completed_Order();
 		return $email_classes;
 	}

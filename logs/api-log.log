@@ -1,14 +1,64 @@
-2024-05-12 08:35:16
+2024-05-12 13:39:26
 FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
 METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
 LINE: 93
-ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
-
+ERROR: SUCCESS: rest/en/V1/product/status
+Data: 
+a:1:{s:12:"products_ids";s:3:"714";}
 ==========================
-2024-05-12 08:35:18
+2024-05-12 13:40:27
 FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
 METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
 LINE: 93
-ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
-
+ERROR: SUCCESS: rest/en/V1/product/status
+Data: 
+a:1:{s:12:"products_ids";s:3:"714";}
+==========================
+2024-05-12 13:40:32
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/ar/V1/buynow
+Data: 
+a:1:{s:4:"data";a:3:{s:6:"client";a:1:{s:5:"email";s:19:"janedoe@example.com";}s:4:"cart";a:1:{i:714;a:1:{s:3:"qty";i:1;}}s:13:"paymentmethod";s:6:"wallet";}}
+==========================
+2024-05-12 13:40:34
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/en/V1/order/myorder
+Data: 
+a:3:{s:6:"status";s:5:"39629";s:8:"pageSize";i:1;s:11:"currentPage";i:1;}
+==========================
+2024-05-12 13:42:12
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/en/V1/product/status
+Data: 
+a:1:{s:12:"products_ids";s:3:"714";}
+==========================
+2024-05-12 13:42:34
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/en/V1/product/status
+Data: 
+a:1:{s:12:"products_ids";s:3:"714";}
+==========================
+2024-05-12 13:42:39
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/ar/V1/buynow
+Data: 
+a:1:{s:4:"data";a:3:{s:6:"client";a:1:{s:5:"email";s:19:"janedoe@example.com";}s:4:"cart";a:1:{i:714;a:1:{s:3:"qty";i:1;}}s:13:"paymentmethod";s:6:"wallet";}}
+==========================
+2024-05-12 13:42:40
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 93
+ERROR: SUCCESS: rest/en/V1/order/myorder
+Data: 
+a:3:{s:6:"status";s:5:"39630";s:8:"pageSize";i:1;s:11:"currentPage";i:1;}
 ==========================

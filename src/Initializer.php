@@ -30,7 +30,7 @@ class Initializer {
 
 
 	function text_domain(): void {
-		load_plugin_textdomain( SPWKS_TD, false, dirname( dirname( plugin_basename( __FILE__ ) )) . '/languages' );
+		load_plugin_textdomain( SPWKS_TD, false, dirname( plugin_basename( __FILE__ ), 2 ) . '/languages' );
 	}
 
 	function wp_enqueue_scripts(): void {
