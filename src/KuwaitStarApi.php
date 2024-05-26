@@ -78,7 +78,6 @@ class KuwaitStarApi {
 	], string $method = 'GET'
 	): mixed {
 		try {
-			$this->login();
 			$headers['Authorization'] = 'Bearer ' . $this->get_token();
 			$data                     = [
 				'headers' => $headers
