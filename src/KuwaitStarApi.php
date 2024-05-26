@@ -13,7 +13,6 @@ class KuwaitStarApi {
 	private string $password;
 	private string $base;
 
-	private string $token;
 	private int $timeout = 30;
 	private Client $client;
 	private Logger $logger;
@@ -61,6 +60,7 @@ class KuwaitStarApi {
 			}
 			$token = trim( $token, '"' );
 			$this->set_token( $token );
+
 			return true;
 		} catch ( GuzzleException|ApiException $e ) {
 			$this->logger->log( error: $e->getMessage(), file: __FILE__, method: __METHOD__, line: __LINE__ );
@@ -131,6 +131,10 @@ class KuwaitStarApi {
 		return @$response;
 	}
 
+	public function stock( string $barcodes ) {
+		return $this->request( url: "rest/en/V1/product/status?products_ids=$barcodes", method: 'get' );
+	}
+
 	public function credit(): ?float {
 		$response = $this->request( url: 'rest/en/V1/Customer/me/wallet', method: 'get' );
 
@@ -170,12 +174,20 @@ class KuwaitStarApi {
 	}
 
 	public function get_token(): string {
-		return $this->token;
+		$token = get_transient( 'kuwait_star_token' );
+		if ( ! $token ) {
+			try {
+				$this->login();
+			} catch ( ApiException $e ) {
+				$this->logger->log( error: $e->getMessage(), file: __FILE__, method: __METHOD__, line: __LINE__ );
+			}
+		}
+
+		return $token;
 	}
 
 	public function set_token( string $token ): KuwaitStarApi {
-		$this->token = $token;
-
+		set_transient( 'kuwait_star_token', $token, 60 * 60 * 2 );
 		return $this;
 	}
 

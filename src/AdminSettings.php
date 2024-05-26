@@ -2,7 +2,6 @@
 
 namespace Sz4h\KuwaitStar;
 
-use CMB2;
 
 class AdminSettings {
 
@@ -92,6 +91,7 @@ class AdminSettings {
 			'default' => '10',
 		) );
 
+
 	}
 
 	public function admin_menu(): void {
@@ -144,8 +144,13 @@ class AdminSettings {
 	public function onSaveSetting( string $object_id, array $updated ): void {
 		if ( 'kuwait_star_options' === $object_id && count( $updated ) > 0 ) {
 			delete_transient( 'kuwait_star_is_active');
+			delete_transient( 'kuwait_star_token');
 			delete_transient( 'kuwait_star_daily_credit');
 			delete_transient( 'kuwait_star_credit');
+		}
+		try {
+			kuwait_star_api()->login();
+		} catch ( Exception\ApiException ) {
 		}
 	}
 

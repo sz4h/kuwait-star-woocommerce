@@ -21,7 +21,7 @@ class Order {
 	public function __construct() {
 		$this->logger = new Logger();
 		add_filter('woocommerce_email_classes',[$this,'woocommerce_email_classes'] );
-		add_action( 'woocommerce_add_to_cart', [ $this, 'add_to_cart' ], 10, 6 );
+//		add_action( 'woocommerce_add_to_cart', [ $this, 'add_to_cart' ], 10, 6 );
 //		add_action( 'woocommerce_pre_payment_complete', [ $this, 'woocommerce_payment_complete' ], 10, 2 );
 		add_action( 'woocommerce_order_status_completed', [ $this, 'woocommerce_order_status_completed' ], 10, 2 );
 	}
@@ -60,11 +60,11 @@ class Order {
 
 
 		/* Check Cards Availability */
-		try {
-			$this->getProductsAvailability( array_keys( $cardProducts) );
-		} catch ( Exception $e ) {
-			$this->failed( [ $e->getMessage() ] );
-		}
+//		try {
+//			$this->getProductsAvailability( array_keys( $cardProducts) );
+//		} catch ( Exception $e ) {
+//			$this->failed( [ $e->getMessage() ] );
+//		}
 		$createOrderResponse      = $this->createBulkOrder( $order, $cardProducts );
 		$this->setItemsMeta( $order, $createOrderResponse );
 

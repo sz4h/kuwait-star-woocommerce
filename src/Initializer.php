@@ -12,6 +12,7 @@ class Initializer {
 	private AdminNotice $admin_notice;
 	private Order $order;
 	private Api $api;
+	private Cron $cron;
 
 	public function __construct() {
 		define( 'SPWKS_PATH', trailingslashit( plugin_dir_path( __DIR__ ) ) );
@@ -26,6 +27,7 @@ class Initializer {
 		$this->admin_notice = new AdminNotice();
 		$this->order = new Order();
 		$this->api = new Api();
+		$this->cron = new Cron();
 	}
 
 
