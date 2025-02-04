@@ -43,7 +43,6 @@ class AdminNotice {
 	public function creditCheck( string|float $alert_threshold ): void {
 		$tokenExists = get_transient( 'kuwait_star_token' );
 		$credit      = get_transient( 'kuwait_star_daily_credit' );
-
 		if ( ! $tokenExists ) {
 			return;
 		}
