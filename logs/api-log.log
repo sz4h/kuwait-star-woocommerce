@@ -231,3 +231,10 @@ LINE: 97
 ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
 
 ==========================
+2025-02-04 17:18:46
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 98
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
