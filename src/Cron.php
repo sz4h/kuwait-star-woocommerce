@@ -20,10 +20,10 @@ class Cron {
 
 	public function on_activation(): void {
 		if ( ! wp_next_scheduled( 'kuwait_star_update_stock_cron' ) ) {
-			wp_schedule_event( time(), 'hourly', 'kuwait_star_update_stock_cron' );
+			wp_schedule_event( time() + (60 * 60), 'hourly', 'kuwait_star_update_stock_cron' );
 		}
 		if ( ! wp_next_scheduled( 'kuwait_star_get_token_cron' ) ) {
-			wp_schedule_event( time(), 'hourly', 'kuwait_star_get_token_cron' );
+			wp_schedule_event( time() + (60 * 60), 'hourly', 'kuwait_star_get_token_cron' );
 		}
 	}
 

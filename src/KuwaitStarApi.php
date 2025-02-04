@@ -5,6 +5,7 @@ namespace Sz4h\KuwaitStar;
 use GuzzleHttp\Exception\GuzzleException;
 use Sz4h\KuwaitStar\Exception\ApiException;
 use GuzzleHttp\Client;
+use WC_Order;
 
 class KuwaitStarApi {
 
@@ -106,18 +107,19 @@ class KuwaitStarApi {
 
 	/**
 	 */
-	public function order( array $items ): string {
+	public function order( WC_Order|bool $order, array $items ): string {
 		$response = $this->request( url: "rest/ar/V1/buynow", params: [
 			'data' => [
 				'client'        => [
 					'email' => $this->email,
 				],
 				'cart'          => $items,
-				'paymentmethod' => 'wallet'
+				'paymentmethod' => 'wallet',
+				'customer_reference' => $order->id
 			]
 		] );
 
-		return @$response[0];
+		return @$response;
 	}
 
 	public function order_details( string $order_id ): mixed {

@@ -1,0 +1,233 @@
+2024-08-25 12:42:21
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2024-08-25 12:42:25
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-08-25 12:42:25
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-08-25 12:42:35
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2024-08-25 13:19:42
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2024-11-24 03:24:33
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2024-11-24 03:24:37
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2024-11-24 03:24:46
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2024-11-24 04:18:06
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2024-11-24 05:26:48
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-13 09:16:57
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-01-13 09:17:00
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-13 09:17:09
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-13 09:19:34
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-14 12:45:29
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-01-14 12:45:30
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-14 12:45:34
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-14 13:33:11
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-15 14:28:00
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-01-15 14:28:04
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-15 14:28:04
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-24 02:22:03
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-01-24 02:22:07
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-24 02:22:08
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-01-28 21:24:53
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-01-28 21:24:56
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-28 21:24:57
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-01-28 21:27:13
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/product/status?products_ids=714,1715
+
+==========================
+2025-02-04 17:00:39
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 101
+ERROR: Client error: `GET https://4codez.com/rest/en/V1/Customer/me/wallet` resulted in a `400 Bad Request` response:
+{"message":"\"%fieldName\" is required. Enter and try again.","parameters":{"fieldName":"customerId"},"trace":"#0 \/home (truncated...)
+
+
+==========================
+2025-02-04 17:00:42
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
+2025-02-04 17:00:47
+FILE: /Users/mello/Sites/wordpress/wp-content/plugins/space-kuwait-star-woocommerce/src/KuwaitStarApi.php
+METHOD: Sz4h\KuwaitStar\KuwaitStarApi::request
+LINE: 97
+ERROR: SUCCESS: rest/en/V1/Customer/me/wallet
+
+==========================
