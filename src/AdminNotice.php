@@ -8,7 +8,7 @@ class AdminNotice {
 	/**
 	 * @var float|mixed|null
 	 */
-	private ?float $credit;
+	private ?float $credit = null;
 
 	public function __construct() {
 		$options = get_option( 'kuwait_star_options' );
@@ -41,8 +41,12 @@ class AdminNotice {
 	 * @return void
 	 */
 	public function creditCheck( string|float $alert_threshold ): void {
-		$credit = get_transient( 'kuwait_star_daily_credit' );
+		$tokenExists = get_transient( 'kuwait_star_token' );
+		$credit      = get_transient( 'kuwait_star_daily_credit' );
 
+		if ( ! $tokenExists ) {
+			return;
+		}
 		if ( ! $credit ) {
 			$credit = kuwait_star_api()?->credit();
 
@@ -55,6 +59,11 @@ class AdminNotice {
 	}
 
 	private function checkLogin(): void {
+		$tokenExists = get_transient( 'kuwait_star_token' );
+
+		if ( ! $tokenExists ) {
+			return;
+		}
 		$isActive = get_transient( 'kuwait_star_is_active' );
 		if ( ! $isActive ) {
 			try {

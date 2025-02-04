@@ -10,8 +10,8 @@ class Cron {
 	private Logger $logger;
 
 	public function __construct() {
-//		register_activation_hook( SPWKS_PATH . 'space-kuwait-star-woocommerce.php', [ $this, 'on_activation' ] );
-//		register_deactivation_hook( SPWKS_PATH . 'space-kuwait-star-woocommerce.php', [ $this, 'on_deactivation' ] );
+		register_activation_hook( SPWKS_PATH . 'space-kuwait-star-woocommerce.php', [ $this, 'on_activation' ] );
+		register_deactivation_hook( SPWKS_PATH . 'space-kuwait-star-woocommerce.php', [ $this, 'on_deactivation' ] );
 		add_action( 'kuwait_star_update_stock_cron', [ $this, 'update_stock_cron' ] );
 		add_action( 'kuwait_star_get_token_cron', [ $this, 'get_token_cron' ] );
 
