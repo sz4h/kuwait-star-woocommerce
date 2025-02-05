@@ -107,17 +107,16 @@ class KuwaitStarApi {
 
 	/**
 	 */
-	public function order( WC_Order|bool $order, array $items ): string {
-		$response = $this->request( url: "rest/ar/V1/buynow", params: [
-			'data' => [
-				'client'        => [
-					'email' => $this->email,
-				],
-				'cart'          => $items,
-				'paymentmethod' => 'wallet',
-				'customer_reference' => $order->id
-			]
-		] );
+	public function order( WC_Order|bool $order, array $items ): array {
+		$response = $this->request( url: "rest/ar/V3/buynow", params: [
+			'client'             => [
+				'email' => $this->email,
+			],
+			'cart'               => $items,
+			'paymentmethod'      => 'wallet',
+			'customer_reference' => (string) $order->get_id(),
+		], method: 'POST' );
+
 
 		return @$response;
 	}
@@ -189,6 +188,7 @@ class KuwaitStarApi {
 
 	public function set_token( string $token ): KuwaitStarApi {
 		set_transient( 'kuwait_star_token', $token, 60 * 60 * 2 );
+
 		return $this;
 	}
 

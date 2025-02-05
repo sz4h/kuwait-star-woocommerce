@@ -66,6 +66,7 @@ class Order {
 //			$this->failed( [ $e->getMessage() ] );
 //		}
 		$createOrderResponse      = $this->createBulkOrder( $order, $cardProducts );
+
 		$this->setItemsMeta( $order, $createOrderResponse );
 
 		$items = $order->get_items();
@@ -161,10 +162,10 @@ class Order {
 	 *
 	 * @return mixed
 	 */
-	public function createBulkOrder( WC_Order|bool $order, array $cardProducts ): string {
+	public function createBulkOrder( WC_Order|bool $order, array $cardProducts ): array {
 		$response = kuwait_star_api()->order( $order, $cardProducts );
-//		$order->update_meta_data( 'kuwait_star_ref_order_id', $response );
-//		$order->save_meta_data();
+		$order->update_meta_data( 'kuwait_star_ref_order_id', $response[0]->order_id );
+		$order->save_meta_data();
 
 		return $response;
 	}
@@ -179,7 +180,7 @@ class Order {
 	public function setItemsMeta( WC_Order|bool $order, mixed $createOrderResponse ): void {
 		$serials  = [];
 //		foreach ( kuwait_star_api()->order_details( $createOrderResponse ) as $ordered ) {
-		foreach ( $createOrderResponse as $ordered ) {
+		foreach ( $createOrderResponse[1] as $ordered ) {
 			$serials[ $ordered->id ] = $ordered->serials;
 		}
 		foreach ( $order->get_items() as $item ) {
