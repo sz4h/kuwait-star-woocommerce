@@ -108,6 +108,14 @@ class KuwaitStarApi {
 	/**
 	 */
 	public function order( WC_Order|bool $order, array $items ): array {
+		$this->logger->log('Data sent',[
+			'client'             => [
+				'email' => $this->email,
+			],
+			'cart'               => $items,
+			'paymentmethod'      => 'wallet',
+			'customer_reference' => (string) $order->get_id(),
+		]);
 		$response = $this->request( url: "rest/ar/V3/buynow", params: [
 			'client'             => [
 				'email' => $this->email,
