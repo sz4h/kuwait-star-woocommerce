@@ -108,6 +108,8 @@ class KuwaitStarApi {
 	/**
 	 */
 	public function order( WC_Order|bool $order, array $items ): array {
+		$time_start = microtime(true);
+
 		$this->logger->log('Data sent',[
 			'client'             => [
 				'email' => $this->email,
@@ -125,6 +127,9 @@ class KuwaitStarApi {
 			'customer_reference' => (string) $order->get_id(),
 		], method: 'POST' );
 
+		$time_end = microtime(true);
+		$execution_time = ($time_end - $time_start)/60;
+		$this->logger->log( 'Total Execution Time: ',['time' => $execution_time]);
 
 		return @$response;
 	}
